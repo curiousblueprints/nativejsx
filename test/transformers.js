@@ -337,21 +337,34 @@ describe('transformers', () => {
           'ExpressionStatement'
         )
 
+        console.log(element.transform.expression.right)
         assert.deepPropertyVal(
           element,
-          'transform.expression.callee.object.name',
+          'transform.expression.operator',
+          '='
+        )
+
+        assert.deepPropertyVal(
+          element,
+          'transform.expression.left.name',
           state.parent
         )
 
         assert.deepPropertyVal(
           element,
-          'transform.expression.callee.property.name',
+          'transform.expression.right.callee.property.name',
           'appendChildren'
         )
 
         assert.deepPropertyVal(
           element,
-          'transform.expression.arguments[0]',
+          'transform.expression.right.arguments[0].name',
+          state.parent
+        )
+
+        assert.deepPropertyVal(
+          element,
+          'transform.expression.right.arguments[1]',
           element.expression
         )
       })

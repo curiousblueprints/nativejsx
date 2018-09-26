@@ -7,4 +7,5 @@ module.exports = function appendChildren (element, children) {
       element.appendChild(document.createTextNode(child.toString()))
     }
   })
+  return element
 }

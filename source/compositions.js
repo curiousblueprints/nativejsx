@@ -149,13 +149,17 @@ compositions.appendChild = (parent, child) => {
 }
 
 compositions.appendChildren = (parent, expression) => {
-  return generators.expressionStatement(
+  return generators.assigns(
+    generators.identifier(parent),
     generators.callExpression(
       generators.member(
-        generators.identifier(parent),
+        generators.member(
+          generators.identifier('window'),
+          generators.identifier('nativejsx')
+        ),
         generators.identifier('appendChildren')
       ),
-      [expression]
+      [generators.identifier(parent), expression]
     )
   )
 }

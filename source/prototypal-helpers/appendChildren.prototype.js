@@ -1,7 +1,8 @@
 (function () {
-  if (typeof HTMLElement.prototype.appendChildren !== 'function') {
-    HTMLElement.prototype.appendChildren = function (children) {
-      return require('./appendChildren.js')(this, children)
+  window.nativejsx = window.nativejsx || {}
+  if (typeof window.nativejsx.appendChildren !== 'function') {
+    window.nativejsx.appendChildren = function (item, children) {
+      return require('./appendChildren.js')(item, children)
     }
   }
 })()

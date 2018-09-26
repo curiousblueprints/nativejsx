@@ -148,12 +148,12 @@ describe('compositions', () => {
   })
 
   describe('appendChildren', () => {
-    it('builds `hello.appendChildren(world)`', () => {
+    it('builds `hello = window.nativejsx.appendChildren(hello, world)`', () => {
       assert.equal(
         escodegen.generate(
           compositions.appendChildren('hello', generators.identifier('world'))
         ),
-        'hello.appendChildren(world);'
+        'hello = window.nativejsx.appendChildren(hello, world);'
       )
     })
   })
