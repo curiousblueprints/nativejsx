@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/treycordova/nativejsx.git"
+    "url": "git+https://github.com/curiousblueprints/nativejsx-noproto.git"
   },
   "keywords": [
     "jsx",
@@ -46,9 +46,9 @@
   "author": "Cameron Ames",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/curiousblueprints/nativejsx/issues"
+    "url": "https://github.com/curiousblueprints/nativejsx-noproto/issues"
   },
-  "homepage": "https://github.com/curiousblueprints/nativejsx#readme",
+  "homepage": "https://github.com/curiousblueprints/nativejsx-noproto#readme",
   "standard": {
     "ignore": [
       "dist",
