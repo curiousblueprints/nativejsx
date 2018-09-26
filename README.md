@@ -1,4 +1,9 @@
-## nativejsx [![Build Status](https://travis-ci.org/treycordova/nativejsx.svg?branch=master)](https://travis-ci.org/treycordova/nativejsx) [![Version Status](https://img.shields.io/npm/v/nativejsx.svg)](https://www.npmjs.org/package/nativejsx)
+## nativejsx-noproto [![Build Status](https://travis-ci.org/curiousblueprints/nativejsx.svg?branch=master)](https://travis-ci.org/curiousblueprints/nativejsx)
+#### JSX to native DOM API transpilation without prototypes.
+
+This is a fork of [NativeJSX](https://github.com/treycordova/nativejsx) for use cases where prototyping on `HTMLElement` isn't possible, such as in the Salesforce [Lightning Framework.](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/intro_framework.htm) This is accomplised using a `window.nativejsx` object. If you cannot pollute the global namespace or are able to use prototypes on `HTMLElement`, you should try the original NativeJSX before using this fork.
+
+## nativejsx
 #### JSX to native DOM API transpilation.
 Like the idea of keeping JSX around as a general-purpose templating language?
 nativejsx is a well-rounded JSX feature subset that makes sense within the realm of JavaScript's native DOM API.

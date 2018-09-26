@@ -1,11 +1,11 @@
 {
-  "name": "nativejsx",
+  "name": "nativejsx-noproto",
   "version": "4.3.0",
   "description": "JSX to native DOM API transpilation.",
   "main": "source/nativejsx.js",
   "dependencies": {
-    "acorn": "^5.1.1",
-    "acorn-jsx": "^4.0.1",
+    "acorn": "^4.0.11",
+    "acorn-jsx": "^3.0.1",
     "commander": "^2.9.0",
     "escodegen": "^1.7.1",
     "glob": "^7.0.3",
@@ -18,14 +18,13 @@
     "standard": "^9.0.0",
     "webpack": "^2.2.1"
   },
-  "engines": [
-    {
-      "node": "6.10.0"
-    }
-  ],
+  "engines": {
+    "node": "10.11.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
-    "test": "standard && ./node_modules/.bin/mocha --harmony",
-    "build": "standard && node ./scripts/generate-asts.js && ./node_modules/.bin/webpack"
+    "test": "standard && mocha --harmony",
+    "build": "standard && node ./scripts/generate-asts.js && webpack"
   },
   "bin": {
     "nativejsx": "./bin/nativejsx"
@@ -44,12 +43,12 @@
     "react",
     "vnode"
   ],
-  "author": "Trey Cordova",
+  "author": "Cameron Ames",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/treycordova/nativejsx/issues"
+    "url": "https://github.com/curiousblueprints/nativejsx/issues"
   },
-  "homepage": "https://github.com/treycordova/nativejsx#readme",
+  "homepage": "https://github.com/curiousblueprints/nativejsx#readme",
   "standard": {
     "ignore": [
       "dist",
