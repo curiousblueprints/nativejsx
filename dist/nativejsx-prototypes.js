@@ -71,9 +71,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 (function () {
-  if (typeof HTMLElement.prototype.appendChildren !== 'function') {
-    HTMLElement.prototype.appendChildren = function (children) {
-      return __webpack_require__(3)(this, children)
+  window.nativejsx = window.nativejsx || {}
+  if (typeof window.nativejsx.appendChildren !== 'function') {
+    window.nativejsx.appendChildren = function (item, children) {
+      return __webpack_require__(3)(item, children)
     }
   }
 })()
@@ -84,9 +85,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 (function () {
-  if (typeof HTMLElement.prototype.setAttributes !== 'function') {
-    HTMLElement.prototype.setAttributes = function (attributes) {
-      return __webpack_require__(5)(this, attributes)
+  window.nativejsx = window.nativejsx || {}
+  if (typeof window.nativejsx.setAttributes !== 'function') {
+    window.nativejsx.setAttributes = function (item, attributes) {
+      return __webpack_require__(5)(item, attributes)
     }
   }
 })()
@@ -97,9 +99,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 (function () {
-  if (typeof HTMLElement.prototype.setStyles !== 'function') {
-    HTMLElement.prototype.setStyles = function (styles) {
-      return __webpack_require__(6)(this, styles)
+  window.nativejsx = window.nativejsx || {}
+  if (typeof window.nativejsx.setStyles !== 'function') {
+    window.nativejsx.setStyles = function (item, styles) {
+      return __webpack_require__(6)(item, styles)
     }
   }
 })()
@@ -118,6 +121,7 @@ module.exports = function appendChildren (element, children) {
       element.appendChild(document.createTextNode(child.toString()))
     }
   })
+  return element
 }
 
 
