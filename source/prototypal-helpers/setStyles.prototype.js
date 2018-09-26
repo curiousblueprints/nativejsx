@@ -1,7 +1,8 @@
 (function () {
-  if (typeof HTMLElement.prototype.setStyles !== 'function') {
-    HTMLElement.prototype.setStyles = function (styles) {
-      return require('./setStyles.js')(this, styles)
+  window.nativejsx = window.nativejsx || {}
+  if (typeof window.nativejsx.setStyles !== 'function') {
+    window.nativejsx.setStyles = function (item, styles) {
+      return require('./setStyles.js')(item, styles)
     }
   }
 })()

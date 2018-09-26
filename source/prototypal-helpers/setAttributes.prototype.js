@@ -1,7 +1,8 @@
 (function () {
-  if (typeof HTMLElement.prototype.setAttributes !== 'function') {
-    HTMLElement.prototype.setAttributes = function (attributes) {
-      return require('./setAttributes.js')(this, attributes)
+  window.nativejsx = window.nativejsx || {}
+  if (typeof window.nativejsx.setAttributes !== 'function') {
+    window.nativejsx.setAttributes = function (item, attributes) {
+      return require('./setAttributes.js')(item, attributes)
     }
   }
 })()
