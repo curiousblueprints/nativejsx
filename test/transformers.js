@@ -23,13 +23,13 @@ describe('transformers', () => {
 
         assert.deepPropertyVal(
           node,
-          'expression.callee.object.name',
+          'expression.left.name',
           state.name
         )
 
         assert.deepPropertyVal(
           node,
-          'expression.callee.property.name',
+          'expression.right.callee.property.name',
           'setStyles'
         )
       })
@@ -337,7 +337,6 @@ describe('transformers', () => {
           'ExpressionStatement'
         )
 
-        console.log(element.transform.expression.right)
         assert.deepPropertyVal(
           element,
           'transform.expression.operator',

@@ -56,13 +56,17 @@ compositions.setAttribute = (variable, attribute, assignmentExpression) => {
 }
 
 compositions.setAttributes = (variable, assignmentExpression) => {
-  return generators.expressionStatement(
+  return generators.assigns(
+    generators.identifier(variable),
     generators.callExpression(
       generators.member(
-        generators.identifier(variable),
+        generators.member(
+          generators.identifier('window'),
+          generators.identifier('nativejsx')
+        ),
         generators.identifier('setAttributes')
       ),
-      [assignmentExpression]
+      [generators.identifier(variable), assignmentExpression]
     )
   )
 }
@@ -95,13 +99,17 @@ compositions.setReference = (variable, assignmentExpression) => {
 }
 
 compositions.setStyles = (variable, assignmentExpression) => {
-  return generators.expressionStatement(
+  return generators.assigns(
+    generators.identifier(variable),
     generators.callExpression(
       generators.member(
-        generators.identifier(variable),
+        generators.member(
+          generators.identifier('window'),
+          generators.identifier('nativejsx')
+        ),
         generators.identifier('setStyles')
       ),
-      [assignmentExpression]
+      [generators.identifier(variable), assignmentExpression]
     )
   )
 }

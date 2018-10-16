@@ -36,12 +36,12 @@ describe('compositions', () => {
   })
 
   describe('setAttributes', () => {
-    it('builds `hello.setAttributes(world)`', () => {
+    it('builds `hello = window.nativejsx.setAttributes(hello, world)`', () => {
       assert.equal(
         escodegen.generate(
           compositions.setAttributes('hello', generators.identifier('world'))
         ),
-        'hello.setAttributes(world);'
+        'hello = window.nativejsx.setAttributes(hello, world);'
       )
     })
   })
@@ -86,7 +86,7 @@ describe('compositions', () => {
   })
 
   describe('setStyles', () => {
-    it('builds `hello.setStyles({})`', () => {
+    it('builds `hello = window.nativejsx.setStyles(hello, {})`', () => {
       assert.equal(
         escodegen.generate(
           compositions.setStyles(
@@ -94,7 +94,7 @@ describe('compositions', () => {
             { type: 'ObjectExpression', properties: [] }
           )
         ),
-        'hello.setStyles({});'
+        'hello = window.nativejsx.setStyles(hello, {});'
       )
     })
   })
