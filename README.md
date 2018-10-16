@@ -1,7 +1,7 @@
-## nativejsx-noproto [![Build Status](https://travis-ci.org/curiousblueprints/nativejsx.svg?branch=master)](https://travis-ci.org/curiousblueprints/nativejsx)
+## nativejsx-noproto [![Build Status](https://travis-ci.org/curiousblueprints/nativejsx-noproto.svg?branch=master)](https://travis-ci.org/curiousblueprints/nativejsx-noproto)
 #### JSX to native DOM API transpilation without prototypes.
 
-This is a fork of [NativeJSX](https://github.com/treycordova/nativejsx) for use cases where prototyping on `HTMLElement` isn't possible, such as in the Salesforce [Lightning Framework.](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/intro_framework.htm) This is accomplised using a `window.nativejsx` object. If you cannot pollute the global namespace or are able to use prototypes on `HTMLElement`, you should try the original NativeJSX before using this fork.
+This is a fork of [NativeJSX](https://github.com/treycordova/nativejsx) for use cases where prototyping on `HTMLElement` isn't possible, such as in the Salesforce [Lightning Framework.](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/intro_framework.htm) This is accomplised using a `window.nativejsx` object. If you cannot pollute the global namespace or are able to use prototypes on `HTMLElement`, you should try the original NativeJSX first.
 
 ## nativejsx
 #### JSX to native DOM API transpilation.
