@@ -151,6 +151,8 @@ module.exports = function setAttributes (element, attributes) {
   } else {
     throw new DOMException('Failed to execute \'setAttributes\' on \'Element\': ' + Object.prototype.toString.call(attributes) + ' is not a plain object.')
   }
+
+  return element
 }
 
 
@@ -160,6 +162,7 @@ module.exports = function setAttributes (element, attributes) {
 
 module.exports = function setStyles (element, styles) {
   for (var style in styles) element.style[style] = styles[style]
+  return element
 }
 
 
